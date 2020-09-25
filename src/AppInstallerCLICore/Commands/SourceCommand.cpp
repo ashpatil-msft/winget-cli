@@ -72,7 +72,7 @@ namespace AppInstaller::CLI
     void SourceAddCommand::ExecuteInternal(Context& context) const
     {
         context <<
-            Workflow::EnsureRunningAsAdmin <<
+           // Workflow::EnsureRunningAsAdmin <<
             Workflow::GetSourceList <<
             Workflow::CheckSourceListAgainstAdd <<
             Workflow::AddSource;

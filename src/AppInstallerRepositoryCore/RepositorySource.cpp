@@ -6,10 +6,13 @@
 #include "AggregatedSource.h"
 #include "SourceFactory.h"
 #include "Microsoft/PreIndexedPackageSourceFactory.h"
+#include "RestPackageSourceFactory.h"
 
 namespace AppInstaller::Repository
 {
     using namespace Settings;
+
+    using namespace AppInstaller::Repository::Rest;
 
     using namespace std::chrono_literals;
     using namespace std::string_view_literals;
@@ -367,6 +370,11 @@ namespace AppInstaller::Repository
                 Utility::CaseInsensitiveEquals(Microsoft::PreIndexedPackageSourceFactory::Type(), type))
             {
                 return Microsoft::PreIndexedPackageSourceFactory::Create();
+            }
+            else if (Utility::CaseInsensitiveEquals(RestPackageSourceFactory::Type(), type))
+            {
+                // Return rest type
+                return RestPackageSourceFactory::Create();
             }
 
             THROW_HR(APPINSTALLER_CLI_ERROR_INVALID_SOURCE_TYPE);

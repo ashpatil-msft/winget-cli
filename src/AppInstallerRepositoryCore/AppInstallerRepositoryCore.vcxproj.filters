@@ -31,6 +31,9 @@
     <Filter Include="Microsoft\Schema\1_1">
       <UniqueIdentifier>{aef8989c-44fd-4848-ae2c-c81d3f2e2c72}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Rest">
+      <UniqueIdentifier>{f989f9ac-0c88-43f0-b514-8a81fed3c81d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -129,6 +132,12 @@
     <ClInclude Include="Microsoft\Schema\1_1\SearchResultsTable.h">
       <Filter>Microsoft\Schema\1_1</Filter>
     </ClInclude>
+    <ClInclude Include="RestSource.h">
+      <Filter>Rest</Filter>
+    </ClInclude>
+    <ClInclude Include="RestPackageSourceFactory.h">
+      <Filter>Rest</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -190,6 +199,12 @@
     </ClCompile>
     <ClCompile Include="Microsoft\Schema\1_1\SearchResultsTable_1_1.cpp">
       <Filter>Microsoft\Schema\1_1</Filter>
+    </ClCompile>
+    <ClCompile Include="RestSource.cpp">
+      <Filter>Rest</Filter>
+    </ClCompile>
+    <ClCompile Include="RestPackageSourceFactory.cpp">
+      <Filter>Rest</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

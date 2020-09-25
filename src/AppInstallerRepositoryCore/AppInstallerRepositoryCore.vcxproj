@@ -198,6 +198,8 @@
     <ClInclude Include="Microsoft\SQLiteIndex.h" />
     <ClInclude Include="Microsoft\SQLiteIndexSource.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="RestPackageSourceFactory.h" />
+    <ClInclude Include="RestSource.h" />
     <ClInclude Include="SourceFactory.h" />
     <ClInclude Include="SQLiteStatementBuilder.h" />
     <ClInclude Include="Public\AppInstallerRepositorySearch.h" />
@@ -234,6 +236,8 @@
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="RepositorySource.cpp" />
+    <ClCompile Include="RestPackageSourceFactory.cpp" />
+    <ClCompile Include="RestSource.cpp" />
     <ClCompile Include="SQLiteStatementBuilder.cpp" />
     <ClCompile Include="SQLiteTempTable.cpp" />
     <ClCompile Include="SQLiteWrapper.cpp" />
