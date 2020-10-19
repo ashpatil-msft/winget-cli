@@ -3,12 +3,13 @@
 #pragma once
 #include "Public/AppInstallerRepositorySource.h"
 #include <AppInstallerSynchronization.h>
-
 #include <memory>
-
+#include <cpprest/http_client.h>
 
 namespace AppInstaller::Repository::Rest
 {
+    using namespace web::http::client;
+
     // A source that holds a rest source.
     struct RestSource : public std::enable_shared_from_this<RestSource>, public ISource
     {

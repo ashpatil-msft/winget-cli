@@ -4,7 +4,6 @@
 #include "RestSource.h"
 #include <winget/ManifestYamlParser.h>
 
-
 namespace AppInstaller::Repository::Rest
 {
     using namespace Utility;
