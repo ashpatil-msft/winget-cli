@@ -122,6 +122,9 @@
     <ClCompile Include="Regex.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ARPChanges.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="PropertySheet.props" />
@@ -386,6 +389,9 @@
     </CopyFileToFolders>
     <CopyFileToFolders Include="TestData\MultiFileManifestV1\ManifestV1-MultiFile-Version.yaml">
       <Filter>TestData\MultiFileManifestV1</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="TestData\Manifest-Bad-Channel-NotSupported.yaml">
+      <Filter>TestData</Filter>
     </CopyFileToFolders>
   </ItemGroup>
 </Project>
