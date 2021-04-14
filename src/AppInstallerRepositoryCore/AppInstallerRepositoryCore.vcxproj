@@ -121,11 +121,10 @@
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-        <PreprocessorDefinitions>_HAS_STD_BYTE=0;_NO_ASYNCRTIMP;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-        <!--<PreprocessorDefinitions>_NO_ASYNCRTIMP;_DEBUG;%(PreprocessorDefinitions);CLICOREDLLBUILD</PreprocessorDefinitions>-->
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_NO_ASYNCRTIMP;_DEBUG;%(PreprocessorDefinitions);CLICOREDLLBUILD</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</TreatWarningAsError>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</TreatWarningAsError>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</TreatWarningAsError>
@@ -136,15 +135,11 @@
       <SubSystem Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">Windows</SubSystem>
       <SubSystem Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Windows</SubSystem>
     </Link>
-    <Lib>
-      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(PlatformShortName)\$(Configuration)\cpprestsdk;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Platform)'=='Win32'">
     <ClCompile>
-        <PreprocessorDefinitions>WIN32;CLICOREDLLBUILD;_HAS_STD_BYTE=0;_NO_ASYNCRTIMP;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-        <!--<PreprocessorDefinitions>WIN32;%(PreprocessorDefinitions);CLICOREDLLBUILD</PreprocessorDefinitions>-->
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_NO_ASYNCRTIMP;WIN32;%(PreprocessorDefinitions);CLICOREDLLBUILD</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</TreatWarningAsError>
     </ClCompile>
     <Link>
@@ -156,12 +151,11 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-        <PreprocessorDefinitions>_HAS_STD_BYTE=0;_NO_ASYNCRTIMP;NDEBUG;_CONSOLE;CLICOREDLLBUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-        <!--<PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions);CLICOREDLLBUILD</PreprocessorDefinitions>-->
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_NO_ASYNCRTIMP;NDEBUG;%(PreprocessorDefinitions);CLICOREDLLBUILD</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</TreatWarningAsError>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</TreatWarningAsError>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</TreatWarningAsError>
@@ -176,10 +170,6 @@
       <SubSystem Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Windows</SubSystem>
       <SubSystem Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Windows</SubSystem>
     </Link>
-    <Lib>
-      <!--<AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(PlatformShortName)\$(Configuration)\cpprestsdk;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>-->
-      <AdditionalLibraryDirectories>$(SolutionDir)$(PlatformShortName)\$(Configuration)\cpprestsdk;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CompositeSource.h" />
@@ -215,6 +205,20 @@
     <ClInclude Include="Microsoft\SQLiteIndex.h" />
     <ClInclude Include="Microsoft\SQLiteIndexSource.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Rest\HttpClientHelper.h" />
+    <ClInclude Include="Rest\RestClient.h" />
+    <ClInclude Include="Rest\RestSource.h" />
+    <ClInclude Include="Rest\RestSourceFactory.h" />
+    <ClInclude Include="Rest\Schema\1_0\Interface.h" />
+    <ClInclude Include="Rest\Schema\1_0\Json\CommonJsonConstants.h" />
+    <ClInclude Include="Rest\Schema\1_0\Json\InformationResponseDeserializer.h" />
+    <ClInclude Include="Rest\Schema\1_0\Json\ManifestDeserializer.h" />
+    <ClInclude Include="Rest\Schema\1_0\Json\SearchRequestSerializer.h" />
+    <ClInclude Include="Rest\Schema\1_0\Json\SearchResponseDeserializer.h" />
+    <ClInclude Include="Rest\Schema\CommonRestConstants.h" />
+    <ClInclude Include="Rest\Schema\IRestClient.h" />
+    <ClInclude Include="Rest\Schema\JsonHelper.h" />
+    <ClInclude Include="Rest\Schema\RestHelper.h" />
     <ClInclude Include="SourceFactory.h" />
     <ClInclude Include="SQLiteStatementBuilder.h" />
     <ClInclude Include="Public\AppInstallerRepositorySearch.h" />
@@ -256,6 +260,17 @@
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="RepositorySource.cpp" />
+    <ClCompile Include="Rest\HttpClientHelper.cpp" />
+    <ClCompile Include="Rest\RestClient.cpp" />
+    <ClCompile Include="Rest\RestSource.cpp" />
+    <ClCompile Include="Rest\RestSourceFactory.cpp" />
+    <ClCompile Include="Rest\Schema\1_0\Interface.cpp" />
+    <ClCompile Include="Rest\Schema\1_0\Json\InformationResponseDeserializer.cpp" />
+    <ClCompile Include="Rest\Schema\1_0\Json\ManifestDeserializer.cpp" />
+    <ClCompile Include="Rest\Schema\1_0\Json\SearchRequestSerializer.cpp" />
+    <ClCompile Include="Rest\Schema\1_0\Json\SearchResponseDeserializer.cpp" />
+    <ClCompile Include="Rest\Schema\JsonHelper.cpp" />
+    <ClCompile Include="Rest\Schema\RestHelper.cpp" />
     <ClCompile Include="SQLiteStatementBuilder.cpp" />
     <ClCompile Include="SQLiteTempTable.cpp" />
     <ClCompile Include="SQLiteWrapper.cpp" />
@@ -264,11 +279,6 @@
     <None Include="Microsoft\README.md" />
     <None Include="packages.config" />
     <None Include="PropertySheet.props" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\cpprestsdk\cpprestsdk.vcxproj">
-      <Project>{866c3f06-636f-4be8-bc24-5f86ecc606a1}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

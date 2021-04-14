@@ -121,6 +121,24 @@ namespace AppInstaller
                 return "Failed to install one or more imported packages";
             case APPINSTALLER_CLI_ERROR_NOT_ALL_PACKAGES_FOUND:
                 return "Could not find one or more requested packages";
+            case APPINSTALLER_CLI_ERROR_JSON_INVALID_FILE:
+                return "Json file is invalid";
+            case APPINSTALLER_CLI_ERROR_SOURCE_NOT_REMOTE:
+                return "The source location is not remote";
+            case APPINSTALLER_CLI_ERROR_UNSUPPORTED_RESTSOURCE:
+                return "The configured rest source is not supported";
+            case APPINSTALLER_CLI_ERROR_RESTSOURCE_INVALID_DATA:
+                return "Invalid data returned by rest source";
+            case APPINSTALLER_CLI_ERROR_BLOCKED_BY_POLICY:
+                return "Operation is blocked by Group Policy";
+            case APPINSTALLER_CLI_ERROR_RESTSOURCE_INTERNAL_ERROR:
+                return "Rest source internal error";
+            case APPINSTALLER_CLI_ERROR_RESTSOURCE_INVALID_URL:
+                return "Invalid rest source url";
+            case APPINSTALLER_CLI_ERROR_RESTSOURCE_UNSUPPORTED_MIME_TYPE:
+                return "Unsupported MIME type returned by rest source";
+            case APPINSTALLER_CLI_ERROR_RESTSOURCE_INVALID_VERSION:
+                return "Invalid rest source contract version";
             default:
                 return "Unknown Error Code";
             }

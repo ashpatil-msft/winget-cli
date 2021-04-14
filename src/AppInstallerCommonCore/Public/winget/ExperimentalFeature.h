@@ -8,6 +8,7 @@
 namespace AppInstaller::Settings
 {
     using namespace std::string_view_literals;
+    struct UserSettings;
 
     struct ExperimentalFeature
     {
@@ -26,11 +27,12 @@ namespace AppInstaller::Settings
             ExperimentalUpgrade = 0x10,
             ExperimentalUninstall = 0x20,
             ExperimentalImport = 0x40,
+            ExperimentalRestSource = 0x80,
             Max, // This MUST always be after all experimental features
 
             // Features listed after Max will not be shown with the features command
             // This can be used to hide highly experimental features
-            ExperimentalExport = 0x80
+            ExperimentalExport = 0x100
         };
 
         using Feature_t = std::underlying_type_t<ExperimentalFeature::Feature>;
@@ -47,6 +49,11 @@ namespace AppInstaller::Settings
         ExperimentalFeature& operator=(ExperimentalFeature&&) = default;
 
         static bool IsEnabled(Feature feature);
+
+#ifndef AICLI_DISABLE_TEST_HOOKS
+        static bool IsEnabled(Feature feature, const UserSettings& userSettings);
+#endif
+
         static ExperimentalFeature GetFeature(ExperimentalFeature::Feature feature);
         static std::vector<ExperimentalFeature> GetAllFeatures();
 
